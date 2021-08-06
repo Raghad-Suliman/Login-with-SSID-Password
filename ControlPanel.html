@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>combine pages</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="ControlPanelStyle.css">
+    <script src="jquery-3.6.0.min.js"></script>
+
+
+
+</head>
+
+
+
+<body>
+
+
+    
+<h1>Control panel</h1>
+
+
+<p>Motor 1</p>
+
+
+<div class="range">
+
+
+<div class="sliderValue">
+    <span>180</span>
+</div>
+<div class="field">
+    <div class="value left">0</div>
+    <input type="range" min="0" max="180" value="90" >
+    <div class="value right">180</div>
+</div>
+</div>
+
+<p>Motor 2</p>
+
+<div class="range">
+<div class="sliderValue">
+    <span>180</span>
+</div>
+<div class="field">
+    <div class="value left">
+        0</div>
+    <input type="range" min="0" max="180" value="90" >
+    <div class="value right">
+        180</div>
+</div>
+</div>
+
+<p>Motor 3</p>
+
+<div class="range">
+<div class="sliderValue">
+    <span>180</span>
+</div>
+<div class="field">
+    <div class="value left">
+        0</div>
+    <input type="range" min="0" max="180" value="90" >
+    <div class="value right">
+        180</div>
+</div>
+</div>
+
+<p>Motor 4</p>
+
+<div class="range">
+<div class="sliderValue">
+    <span>180</span>
+</div>
+<div class="field">
+    <div class="value left">
+        0</div>
+    <input type="range" min="0" max="180" value="90" >
+    <div class="value right">
+        180</div>
+</div>
+</div>
+
+<p>Motor 5</p>
+
+<div class="range">
+<div class="sliderValue">
+    <span>180</span>
+</div>
+<div class="field">
+    <div class="value left">
+        0</div>
+    <input type="range" min="0" max="180" value="90" >
+    <div class="value right">
+        180</div>
+</div>
+</div>
+
+
+<p>Motor 6</p>
+
+<div class="range">
+<div class="sliderValue">
+    <span>180</span>
+</div>
+<div class="field">
+    <div class="value left">
+        0</div>
+    <input type="range" min="0" max="180" value="90" >
+    <div class="value right">
+        180</div>
+</div>
+</div>
+<br>
+<button type="button" class=btn> save</button>
+<br>
+<button type="button" class="btn"> Run</button>
+
+<script>
+$(document).ready(function () {
+
+    $('input[type="range"]').on('input', function(){
+        var bubble = $(this).parent().parent().find('.sliderValue span');
+        bubble.text($(this).val());
+        bubble.addClass('show');
+        bubble.css('left', $(this).val() / 2 + '%');
+    });
+    
+    $('input[type="range"]').on('blur', function(){
+        $(this).parent().parent().find('.sliderValue span').removeClass('show');
+    });
+
+});
+</script>
+
+
+
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+
+
+
+
+<h1>Direction control panel </h1>
+
+<br>
+
+<br>
+<br>
+    <div class="center">
+   
+        <span></span>
+          
+          <table style="width:40%">
+           <tr>
+             <th>  </th>
+             <th>  </th> 
+             <th>  </th>
+           </tr>
+                <tr><td></td>
+             <td>  <div class="center">
+               <div class="button">
+               <button>Forward</button>
+               <span></span>
+               <span></span>
+               </div>        </td>
+               <td>   </td>
+                 </tr> </div>
+         
+                 <br>
+         
+               <tr>
+             <td></td>  <div class="button">
+               <button>Left</button>
+               <span></span>
+               <span></span>
+               </div>
+              </div>
+             <br>
+             <br> <br> <br> <br> <br>
+       
+             
+             </td>
+                <td> 
+                 <br><br><br><br>
+       
+                 
+                 <div class="circle">
+                   <button>Stop</button>
+                   <span></span>
+                   <span></span>
+                   </div>
+                   </td>
+       
+                <td>
+                  
+                 <br>
+                  <br>
+                  <br>
+                  <br>
+                 <div class="button">
+                 <button>Right</button>
+                 <span></span>
+                 <span></span>
+                 </div>  
+                  </td>
+                </tr>  </div>
+         
+                 
+                 
+                 <tr>
+       
+       
+                 <td></td>
+             <td>  
+               <br><br><br><br>
+               
+               <div class="button">
+               <button>Backward</button>
+               <span></span>
+               <span></span>
+               </div>
+                 <td> 
+                </td>
+                </tr>
+   
+
+</body>
+</html>
